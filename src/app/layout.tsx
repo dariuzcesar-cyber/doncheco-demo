@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Jost } from "next/font/google";
 import AuthModal from "@/components/AuthModal";
 import CartDrawer from "@/components/CartDrawer";
 import CheckoutModal from "@/components/CheckoutModal";
@@ -10,13 +9,6 @@ import { CheckoutProvider } from "@/context/CheckoutContext";
 import { OrdersProvider } from "@/context/OrdersContext";
 import { SettingsProvider } from "@/context/SettingsContext";
 import "./globals.css";
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-jost",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Don Checo Delicatessen | Tablas de Quesos y Charcutería en Colima",
@@ -34,12 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es-MX" className={jost.variable}>
+    <html lang="es-MX">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
