@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Cargada vía <link> de Google Fonts en layout.tsx (next/font/google falla en el build de Cloudflare Pages). */
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+}
+
 @layer base {
   @media (prefers-reduced-motion: no-preference) {
     html {
