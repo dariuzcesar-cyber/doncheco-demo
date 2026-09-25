@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-papel font-sans text-pizarra antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-tinto text-white hover:bg-tintoDark focus-visible:ring-tinto;
+  }
+
+  .btn-outline {
+    @apply btn border border-tinto text-tinto hover:bg-tinto/5 focus-visible:ring-tinto;
+  }
+
+  .btn-light {
+    @apply btn bg-papel text-tinto hover:bg-white focus-visible:ring-white focus-visible:ring-offset-black/40;
+  }
+
+  .btn-whatsapp {
+    @apply btn bg-whatsapp text-white hover:brightness-95 focus-visible:ring-whatsapp;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-xs;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-medium;
+  }
+
+  .badge-arte {
+    @apply badge border border-madera/40 bg-papelDark text-pizarra/70 italic;
+  }
+
+  .badge-envio {
+    @apply badge bg-tinto/10 text-tinto;
+  }
+
+  .badge-destacado {
+    @apply badge bg-madera text-white not-italic;
+  }
+
+  .card {
+    @apply rounded-2xl border border-madera/15 bg-white shadow-sm;
+  }
+}
